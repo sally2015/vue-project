@@ -13,7 +13,7 @@
 	export default(){
 		ready () {
 			setTimeout( () => {
-				console.log(this);
+				console.log(456);
 				this.$route.router.go({
 					path:'/home',
 					replace:true
