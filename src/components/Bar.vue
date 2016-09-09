@@ -1,6 +1,6 @@
 <template>
 	<nav class="bar bar-tab">
-		<!-- <slot></slot> -->
+		<slot></slot>
 	</nav>
 </template>
 <style>

@@ -1,25 +1,11 @@
 <template>
   <div>
-      <bar class="bar bar-tab">
-            <a class="tab-item external active" href="#">
-                <span class="icon icon-home"></span>
-                <span class="tab-label">首页</span>
-            </a>
-            <a class="tab-item external" href="#">
-                <span class="icon icon-search"></span>
-                <span class="tab-label">发现</span>
-            </a>
-            <a class="tab-item external" href="#">
-                <span class="icon icon-message"></span>
-                <span class="tab-label">消息</span>
-            </a>
-            <a class="tab-item external" href="#">
-                <span class="icon icon-me"></span>
-                <span class="tab-label">我</span>
-            </a>
+      <bar v-if="isIndex" class="bar bar-tab">
+            <bar-item path="/home" label="首页" icon="home"></bar-item>
+            <bar-item path="/search" label="发现" icon="search"></bar-item>
+            <bar-item path="/message" label="消息" icon="message"></bar-item>
+            <bar-item path="/me" label="我" icon="me"></bar-item>
         </bar>
-      <a v-link="{ path: '/foo' }">Go to Foo</a>
-      <a v-link="{ path: '/bar' }">Go to Bar</a>
     <router-view></router-view>
   </div>
 </template>
@@ -30,6 +16,11 @@ import BarItem from './components/BarItem';
 
 
 export default {
+  data () {
+    return {
+      isIndex :  true
+    }
+  },
   components: {
     Bar,
     BarItem
