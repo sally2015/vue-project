@@ -1,5 +1,6 @@
 
-# vue-project
+# vue-project [![GitHub issues](https://img.shields.io/github/issues/sally2015/vue-project.svg)](https://github.com/sally2015/vue-project/issues)
+
 
 仿talkingcoder app
 
